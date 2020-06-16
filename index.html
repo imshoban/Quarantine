@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+      <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="container-fluid">
+    <div class="jumbotron" id="new">
+      <h1>Tic Tac Toe</h1>
+      <h3>Get ready to play</h3>
+    </div>
+    </div>
+    <center>
+      <div class="container">
+        <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 img-thumbnail boxy">Player1<br><span id="one">0</span> </div>
+      <div class="col-lg-6 col-md-6 col-sm-6 img-thumbnail boxy">Player2<br><span id="two">0</span></div>
+      </div>
+      </div>
+      <br>
+    <table>
+      <tr>
+        <td id='00'></td>
+        <td id="01"></td>
+        <td id="02"></td>
+      </tr>
+      <tr>
+        <td id="10"></td>
+        <td id="11"></td>
+        <td id="12"></td>
+      </tr>
+      <tr>
+        <td id="20"></td>
+        <td id="21"></td>
+        <td id="22"></td>
+      </tr>
+    </table>
+
+    <br>
+    <button id="but"type="button" class="btn btn btn-secondary btn-large" name="button" onclick="clearSquares()">Restart</button>
+  </center>
+    <script src="script.js" charset="utf-8"></script>
+  </body>
+  </html>
