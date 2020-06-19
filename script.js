@@ -1,10 +1,13 @@
 var squares=document.getElementsByTagName("td");
 var player1=0;
 var player2=0;
+var winning=document.getElementById("winning");
 function clearSquares(){
   for (var i = 0; i < squares.length; i++) {
     squares[i].innerHTML="";
   }
+  winning.classList.remove("winning");
+  winning.classList.add("initail");
   turn=true;
   count=1;
 }
@@ -22,22 +25,27 @@ function myFunction() {
       this.innerHTML="O";
       count+=1;
     }
-    console.log(count);
     if(winner()!=-1 && winner()!=""){
       if(winner()=="X"){
-        alert("X is winner");
+        winning.classList.remove("initail");
+        winning.classList.add("winning");
+        document.getElementById("winning-msg").innerHTML="X Wins!";
         player1+=1;
         assign();
       }
       else{
-        alert("O is winner");
+        winning.classList.remove("initail");
+        winning.classList.add("winning");
+        document.getElementById("winning-msg").innerHTML="O Wins!";
         player2+=1;
         assign();
       }
       turn=false;
     }
     if(draw()==1){
-      alert("Draw");
+      winning.classList.remove("initail");
+      winning.classList.add("winning");
+      document.getElementById("winning-msg").innerHTML="Draw!";
     }
 }
 function winner(){
